@@ -61,34 +61,24 @@ new Vue({
 	//Vueが読み込まれたときに実行する処理を定義
 	methods: {
 		fetchImagesFromFlickr(searchText) {
-			const url = getRequestURL(searchText);
-			$.getJSON(url, (data) => {
-				if (data.stat !== 'ok') {
-					return;
-				}
-				const fetchedPhotos = data.photos.page;
-				console.log(data);
-				console.log(data);
-				if (fetchedPhotos.length === 0) {
-					return;
-				}
-				const dogs = [];
-				const cats = [];
-				const pets = [];
-				pets.splice(...cats, ...dogs);
-				this.cats = data.cats.photo.map(photo => ({
-					id: photo.id,
-					imageURL: getFlickrImageURL(photo, 'q'),
-					pageURL: getFlickrPageURL(photo),
-					text: getFlickrText(photo),
-				}));
-				this.dogs = data.dogs.photo.map(photo => ({
-					id: photo.id,
-					imageURL: getFlickrImageURL(photo, 'q'),
-					pageURL: getFlickrPageURL(photo),
-					text: getFlickrText(photo),
-				}));
-			});
-		}
+            const url = getRequestURL(searchText);
+            return $.getJSON(url, (data) => {
+                if (data.stat !== 'ok') {
+                    return;
+                }
+                const fetchedPhotos = data.photos.page;
+                console.log(data);
+                console.log(data);
+                if (fetchedPhotos.length === 0) {
+                    return;
+                }
+                data.photos.photo.map(photo => ({
+                    id: photo.id,
+                    imageURL: getFlickrImageURL(photo, 'q'),
+                    pageURL: getFlickrPageURL(photo),
+                    text: getFlickrText(photo),
+                }));
+            });
+        }
 	}
 });
