@@ -335,8 +335,10 @@
   <section id="gallery" class="gallery">
     <div class="gallery__phrase">ギャラリー</div>
     <h2 class="gallery__title">Gallery</h2>
+    
+    <div>
     <div class="image-gallery">
-      <div class="image-gallery__item">
+
          <div id="gallery">
       <!--<div>{{ total }} photos in total</div>-->
           <a
@@ -347,13 +349,20 @@
             class="d-inline-block"
             target="_blank"
           >
+         
+         <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
-          </a>
+      
+        </div>
+        </a>
+    </div>
+        <div>
+        <div class="image-gallery">  
           <a
             v-for="photo in dogs"
             v-bind:key="photo.id"
@@ -362,57 +371,17 @@
             class="d-inline-block"
             target="_blank"
           >
+           <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
+          </div>
           </a>
+        </div>
       </div>
-
-        
-      <!--  <a class="d-inline-block" href="img/kitten1.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/kitten1.jpg" width="150" height="150" alt="シェパード">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/kitten2.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/kitten2.jpg" width="150" height="150" alt="レトリバー">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/kitten3.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/kitten3.jpg" width="150" height="150" alt="プードル">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/kitten4.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/kitten4.jpg" width="150" height="150" alt="ポメラニアン">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/puppy1.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/puppy1.jpg" width="150" height="150" alt="アメリカンショートヘア">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/puppy2.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/puppy2.jpg" width="150" height="150" alt="スコティッシュフォールド">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/puppy3.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/puppy3.jpg" width="150" height="150" alt="ベンガル">-->
-      <!--  </a>-->
-      <!--</div>-->
-      <!--<div class="image-gallery__item">-->
-      <!--  <a class="d-inline-block" href="img/puppy4.jpg">-->
-      <!--    <img class="img-fluid" src="img/gallery-thumbnail/puppy4.jpg" width="150" height="150" alt="ロシアンブルー">-->
-      <!--  </a>-->
-      
-      </div>
-    </div>
     <!--/.image-gallery -->
   </section>
   <!--/.gallery -->

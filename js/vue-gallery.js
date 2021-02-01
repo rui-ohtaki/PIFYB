@@ -43,14 +43,25 @@ const getFlickrText = (photo) => {
 	}
 	return text;
 };
+
+Vue.directive('tooltip', {
+  bind(el, binding) {
+    $(el).tooltip({
+      title: binding.value,
+      placement: 'bottom',
+    });
+  },
+  unbind(el) {
+    $(el).tooltip('dispose');
+  },
+});
+
 new Vue({
 	el: '#gallery', // elオプションの値に '#gallery' を設定
 	// ローカル登録するコンポーネントを設定
 	// ( コンポーネントを利用しない場合は components: {}, は削除すること )
 	data: {
 		// 利用するデータを設定
-		// total: 0,
-		// photos: [],
 		cats: [],
 		dogs: [],
 	},
@@ -61,24 +72,22 @@ new Vue({
 	//Vueが読み込まれたときに実行する処理を定義
 	methods: {
 		fetchImagesFromFlickr(searchText) {
-            const url = getRequestURL(searchText);
-            return $.getJSON(url, (data) => {
-                if (data.stat !== 'ok') {
-                    return;
-                }
-                const fetchedPhotos = data.photos.page;
-                console.log(data);
-                console.log(data);
-                if (fetchedPhotos.length === 0) {
-                    return;
-                }
-                data.photos.photo.map(photo => ({
-                    id: photo.id,
-                    imageURL: getFlickrImageURL(photo, 'q'),
-                    pageURL: getFlickrPageURL(photo),
-                    text: getFlickrText(photo),
-                }));
-            });
-        }
+			const url = getRequestURL(searchText);
+			$.getJSON(url, (data) => {
+				if (data.stat !== 'ok') {
+					return;
+				}
+				const fetchedPhotos = data.photos.page;
+				if (fetchedPhotos.length === 0) {
+					return;
+				}
+				this[searchText + 's'] = data.photos.photo.map(photo => ({
+					id: photo.id,
+					imageURL: getFlickrImageURL(photo, 'q'),
+					pageURL: getFlickrPageURL(photo),
+					text: getFlickrText(photo),
+				}));
+			}, this);
+		}
 	}
 });
