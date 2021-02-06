@@ -62,15 +62,21 @@ new Vue({
 	// ( コンポーネントを利用しない場合は components: {}, は削除すること )
 	data: {
 		// 利用するデータを設定
-		cats: [],
-		dogs: [],
+		cakes: [],
+		fruits: [],
+	    cats: [],
+	  　chocolates: [],
 	},
 	created() {
-		this.fetchImagesFromFlickr('dog');
+		this.fetchImagesFromFlickr('cake');
+		this.fetchImagesFromFlickr('fruit');
 		this.fetchImagesFromFlickr('cat');
+		this.fetchImagesFromFlickr('chocolate');
 	},
 	//Vueが読み込まれたときに実行する処理を定義
+
 	methods: {
+		
 		fetchImagesFromFlickr(searchText) {
 			const url = getRequestURL(searchText);
 			$.getJSON(url, (data) => {

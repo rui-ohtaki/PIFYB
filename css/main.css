@@ -3,7 +3,7 @@
 body {
   color: #000;
   background-color: #fff;
-  font-family: "Droid Serif", YuGothic, "游ゴシック", sans-serif;
+  font-family: "Gill Sans", "ヒラギノ丸ゴ ProN", sans-serif;
 }
 
 .gallery-popup__caption {
@@ -22,7 +22,7 @@ body {
 .showcase {
   /* 左右中央に置く */
   margin: 0 auto;
-
+  background-color: #fff;
   width: 88%;
   max-width: 940px;
 }
@@ -30,7 +30,7 @@ body {
 .showcase__details {
   /* 左右中央に置く */
   margin: 0 auto;
-
+  background-color: #fff;
   width: 100%;
   max-width: 460px;
 }
@@ -38,16 +38,19 @@ body {
 .showcase__kind-name {
   font-size: 1.5rem;
   font-weight: 700;
+  background-color: #fff;
 }
 
 .showcase__kind-description {
   font-size: 1.2rem;
   line-height: 1.6;
+  background-color: #fff;
 }
 
 .card {
   text-align: center;
   margin-bottom: 3em;
+  
 }
 
 .card__number,
@@ -182,7 +185,7 @@ body {
 .kittens__phrase,
 .prepare__phrase,
 .gallery__phrase {
-  text-align: center;
+  text-align:  center;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 1.79px;
@@ -192,19 +195,19 @@ body {
 .kittens__title,
 .prepare__title,
 .gallery__title {
-  margin-bottom: 37px;
-  text-align: center;
+  margin-bottom: 100px;
+  text-align:  center;
   font-size: 2.4rem;
   letter-spacing: 2px;
 }
 
 .kittens {
-  padding-top: 82px;
-  padding-bottom: 92px;
+  padding-top: 100px;
+    padding-bottom: 100px;
 
-  /* 上から重ねる順に背景を指定 */
-  background: url(../img/kittens-bg-large.png), url(../img/kittens-bg-small.png),
-    #fcecf5;
+   /*上から重ねる順に背景を指定 */
+  /*background: url(../img/kittens-bg-large.png), url(../img/kittens-bg-small.png),*/
+  /*  #fcecf5;*/
 }
 
 .prepare {
@@ -264,7 +267,7 @@ footer {
 }
 .tabs__menu a {
   display: block;
-  color: #557f95;
+  color: none;
   text-decoration: none;
 }
 
@@ -278,7 +281,8 @@ footer {
   opacity: 1;
 }
 .tabs__menu .active a {
-  color: #3f4548;
+  color: black;
+  margin-bottom: 60px;
 }
 
 /* 各タブのコンテンツはデフォルトで非表示 */
@@ -300,7 +304,7 @@ footer {
  * Magnific Popupのフェードイン・フェードアウト - ここから
  * -------------------------------
  */
-/* オーバーレイする背景 初期状態 */
+ /*オーバーレイする背景 初期状態 */
 .mfp-fade.mfp-bg {
   opacity: 0;
 
@@ -308,16 +312,16 @@ footer {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-/* オーバーレイする背景 開始時アニメーション */
+ /*オーバーレイする背景 開始時アニメーション */
 .mfp-fade.mfp-bg.mfp-ready {
   opacity: 0.8;
 }
-/* オーバーレイする背景 終了時アニメーション */
+ /*オーバーレイする背景 終了時アニメーション */
 .mfp-fade.mfp-bg.mfp-removing {
   opacity: 0;
 }
 
-/* コンテンツ 初期状態 */
+ /*コンテンツ 初期状態 */
 .mfp-fade.mfp-wrap .mfp-content {
   opacity: 0;
 
@@ -325,11 +329,11 @@ footer {
   -moz-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-/* コンテンツ 開始時アニメーション */
+ /*コンテンツ 開始時アニメーション */
 .mfp-fade.mfp-wrap.mfp-ready .mfp-content {
   opacity: 1;
 }
-/* コンテンツ 終了時アニメーション */
+ /*コンテンツ 終了時アニメーション */
 .mfp-fade.mfp-wrap.mfp-removing .mfp-content {
   opacity: 0;
 }
@@ -375,11 +379,11 @@ footer {
     text-align: left;
   }
   .showcase--rightpic .showcase__thumbnails {
-    text-align: right;
+    text-align: left;
   }
 
   .showcase--rightpic .showcase__kind-name {
-    text-align: right;
+    text-align: left;
   }
 
   .showcase__details {
@@ -393,10 +397,27 @@ footer {
   }
 }
 
+  .discription{
+   text-align: left;
+}
+
 /* 印刷用スタイル */
 @media print {
   .animated {
     /* すべて表示 */
     opacity: 1;
   }
+}
+
+#login {
+  padding-top: 51px;
+}
+
+#login__help {
+  display: none;
+}
+
+.titlebar { 
+  padding-top: 51px;
+  text-align: left;
 }
