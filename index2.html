@@ -1,92 +1,64 @@
 <!DOCTYPE html>
 <html lang="ja">
-
+  
 <head>
-  <meta charset="utf-8">
-  <title>Perfect Images for Your Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Webフォント -->
-  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
-  <!-- その他のライブラリのCSS -->
-  <link rel="stylesheet" href="css/vendor/animate.css">
-  <link rel="stylesheet" href="css/vendor/magnific-popup.css">
-
-  <link rel="stylesheet" href="css/main.css">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-  <noscript>
-    <!-- JavaScriptが無効化されている場合の追加スタイルシート -->
-    <link rel="stylesheet" href="css/noscript.css">
-  </noscript>
-
+	<meta charset="utf-8">
+	<title>Perfect Images For Your Blog</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- Webフォント -->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"><!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><!-- その他のライブラリのCSS -->
+	<link href="css/vendor/animate.css" rel="stylesheet">
+	<link href="css/vendor/magnific-popup.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+	</script> <noscript><!-- JavaScriptが無効化されている場合の追加スタイルシート -->
+	<link href="css/noscript.css" rel="stylesheet"></noscript>
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
-  <div class="top">
-    <!-- ナビゲーションバー -->
-    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-      <div class="container-fluid">
-        <!-- ホームリンク -->
-        <a href="#" class="navbar-brand" aria-label="ホーム">
-          <i class="fab fa-blogger fa-2x" aria-hidden="true"></i>
-        </a>
-        <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- メニュー -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#top">Top</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#faq">FAQ</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#login">Logout</a>
-            </li>
-          </ul>
-        </div>
-        <!--/.nav-collapse -->
-      </div>
-      <!--/.container-fluid -->
-    </nav>
-    <div class="top__text-box">
-      <h3 class="top__title">Perfect Imagesfor Your Blog<br>画像検索</h3>
-    </div>
-  </div>
-
-
-  <div class="search__box">
-    <form action="cgi-bin/example.cgi" method="post">
-      <p>登録したいキーワードを入力してください。</p>
-      <input type="search" name="search" placeholder="キーワードを入力">
-      <input type="search" name="search" placeholder="キーワードを入力">
-      <input type="search" name="search" placeholder="キーワードを入力">
-      <input type="search" name="search" placeholder="キーワードを入力">
-      <input type="search" name="search" placeholder="キーワードを入力">
-      <input type="submit" name="submit" value="登録・更新">
-    </form>
-  </div>
+	<div class="top">
+		<!-- ナビゲーションバー -->
+		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+			<div class="container-fluid">
+				<!-- ホームリンク -->
+				 <a aria-label="ホーム" class="navbar-brand" href="#"><i aria-hidden="true" class="fab fa-blogger fa-2x"></i></a> <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
+				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> <!-- メニュー -->
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#top">Top</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#faq">FAQ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#login">Logout</a>
+						</li>
+					</ul>
+				</div><!--/.nav-collapse -->
+			</div><!--/.container-fluid -->
+		</nav>
+		<div class="top__text-box">
+			<h3 class="top__title">Perfect Imagesfor Your Blog<br>
+			画像検索</h3>
+		</div>
+	</div>
+	<div class="search__box">
+		<form action="cgi-bin/example.cgi" method="post">
+			<p>登録したいキーワードを入力してください。</p><input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="submit" type="submit" value="登録・更新">
+		</form>
+	</div>
 
   <!-- ギャラリー -->
   <section id="gallery" class="gallery">
     <div class="image-gallery">
-
+  
          <div id="gallery">
            <div class="titlebar">
            <h3>Cakes</h3>
@@ -99,19 +71,19 @@
             class="d-inline-block"
             target="_blank"
           >
-    <div class="image-gallery__item">
+            <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
+            </div>
+         </a>
         </div>
-        </a>
-        </div>
-      </div>
-
-     <div class="image-gallery">
+    </div>
+  
+    <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
            <h3>Fruits</h3>
@@ -124,20 +96,20 @@
             class="d-inline-block"
             target="_blank"
           >
-
-    <div class="image-gallery__item">
+  
+            <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
-        </div>
+            </div>
         </a>
-        </div>
       </div>
-
-<div class="image-gallery">
+    </div>
+  
+    <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
            <h3>Cats</h3>
@@ -150,21 +122,21 @@
             class="d-inline-block"
             target="_blank"
           >
-
-    <div class="image-gallery__item">
+  
+            <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
+            </div>
+         </a>
         </div>
-        </a>
-        </div>
-      </div>
-
-
- <div class="image-gallery">
+    </div>
+  
+  
+    <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
            <h3>Chocolate</h3>
@@ -177,48 +149,49 @@
             class="d-inline-block"
             target="_blank"
           >
-
-    <div class="image-gallery__item">
+  
+            <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
               v-bind:alt="photo.text"
               width="150"
               height="150"
             >
+            </div>
+         </a>
         </div>
-        </a>
-        </div>
-      </div>
-
-      <!--/.image-gallery -->
+    </div>
   </section>
-  <!--/.gallery -->
+<!--/.gallery -->
 
-  <!-- フッター -->
-  <footer>
-    &copy; 2021 Perfect Images for Your Blog
-  </footer>
-
-  <!-- まずjQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-
-  <!-- Popper.js, 次に Bootstrap JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-  <!-- その他のライブラリのJavaScript -->
-  <script src="js/vendor/jquery.waypoints.min.js"></script>
-  <script src="js/vendor/jquery.magnific-popup.min.js"></script>
-  <script src="js/vendor/mobile-detect.min.js"></script>
-
-  <!-- Vue.js -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/vue-gallery.js"></script>
-
-  <script src="js/main.js"></script>
-
-  <!-- Font Awesome -->
-  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
+<!-- フッター -->
+	<footer>
+		&copy; 2021 Perfect Images for Your Blog
+	</footer><!-- まずjQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js">
+	</script> <!-- Popper.js, 次に Bootstrap JS -->
+	 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+	</script> 
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+	</script> <!-- その他のライブラリのJavaScript -->
+	 
+	<script src="js/vendor/jquery.waypoints.min.js">
+	</script> 
+	<script src="js/vendor/jquery.magnific-popup.min.js">
+	</script> 
+	<script src="js/vendor/mobile-detect.min.js">
+	</script> <!-- Vue.js -->
+	 
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+	</script> 
+	<script src="js/vue-gallery.js">
+	</script> 
+	<script src="js/main.js">
+	</script> <!-- Font Awesome -->
+	 
+	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js">
+	</script>
 </body>
 
 </html>
