@@ -422,3 +422,15 @@ footer {
   text-align: left;
 }
 
+.search__box {
+  /* 上下中央に置く */
+  position: relative;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+
+  font-weight: 100;
+}

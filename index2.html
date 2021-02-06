@@ -23,28 +23,23 @@
     <!-- JavaScriptが無効化されている場合の追加スタイルシート -->
     <link rel="stylesheet" href="css/noscript.css">
   </noscript>
-  
+
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
-  
   <div class="top">
-
     <!-- ナビゲーションバー -->
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
-
         <!-- ホームリンク -->
         <a href="#" class="navbar-brand" aria-label="ホーム">
           <i class="fab fa-blogger fa-2x" aria-hidden="true"></i>
         </a>
-
         <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <!-- メニュー -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -57,7 +52,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#faq">FAQ</a>
             </li>
-            
+
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
@@ -70,35 +65,28 @@
       </div>
       <!--/.container-fluid -->
     </nav>
-  </div>
-  
     <div class="top__text-box">
-      <h1 class="top__title">Perfect Imagesfor Your Blog<br>画像検索</h1>
+      <h3 class="top__title">Perfect Imagesfor Your Blog<br>画像検索</h3>
     </div>
-
-<!--検索キーワード登録エリア-->
-
-<div class="search__box">
-<form action="cgi-bin/example.cgi" method="post">
-  <p>登録したいキーワードを入力してください。</p>
-  <input type="search" name="search" placeholder="キーワードを入力">
-  <input type="search" name="search" placeholder="キーワードを入力">
-  <input type="search" name="search" placeholder="キーワードを入力">
-  <input type="search" name="search" placeholder="キーワードを入力">
-  <input type="search" name="search" placeholder="キーワードを入力">
-  <input type="submit" name="submit" value="登録・更新">
-</form>
-</div>
-
-<!--検索キーワード登録エリア-->
+  </div>
 
 
-<div class="top__text-box">
+  <div class="search__box">
+    <form action="cgi-bin/example.cgi" method="post">
+      <p>登録したいキーワードを入力してください。</p>
+      <input type="search" name="search" placeholder="キーワードを入力">
+      <input type="search" name="search" placeholder="キーワードを入力">
+      <input type="search" name="search" placeholder="キーワードを入力">
+      <input type="search" name="search" placeholder="キーワードを入力">
+      <input type="search" name="search" placeholder="キーワードを入力">
+      <input type="submit" name="submit" value="登録・更新">
+    </form>
+  </div>
+
   <!-- ギャラリー -->
   <section id="gallery" class="gallery">
-    
     <div class="image-gallery">
-      
+
          <div id="gallery">
            <div class="titlebar">
            <h3>Cakes</h3>
@@ -111,7 +99,6 @@
             class="d-inline-block"
             target="_blank"
           >
-         
     <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
@@ -123,7 +110,7 @@
         </a>
         </div>
       </div>
-      
+
      <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
@@ -137,7 +124,7 @@
             class="d-inline-block"
             target="_blank"
           >
-         
+
     <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
@@ -149,7 +136,7 @@
         </a>
         </div>
       </div>
-        
+
 <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
@@ -163,7 +150,7 @@
             class="d-inline-block"
             target="_blank"
           >
-         
+
     <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
@@ -175,8 +162,8 @@
         </a>
         </div>
       </div>
-      
-      
+
+
  <div class="image-gallery">
          <div id="gallery">
            <div class="titlebar">
@@ -190,7 +177,7 @@
             class="d-inline-block"
             target="_blank"
           >
-         
+
     <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
@@ -202,11 +189,10 @@
         </a>
         </div>
       </div>
-      
+
       <!--/.image-gallery -->
   </section>
   <!--/.gallery -->
-</div>
 
   <!-- フッター -->
   <footer>
