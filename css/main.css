@@ -203,7 +203,7 @@ body {
 
 .kittens {
   padding-top: 100px;
-    padding-bottom: 100px;
+  padding-bottom: 100px;
 
    /*上から重ねる順に背景を指定 */
   /*background: url(../img/kittens-bg-large.png), url(../img/kittens-bg-small.png),*/
@@ -421,3 +421,4 @@ footer {
   padding-top: 51px;
   text-align: left;
 }
+
