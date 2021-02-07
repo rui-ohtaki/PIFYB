@@ -11,14 +11,13 @@
 	<link href="css/main.css" rel="stylesheet"><noscript><!-- JavaScriptが無効化されている場合の追加スタイルシート -->
 	<link href="css/noscript.css" rel="stylesheet"></noscript>
 </head>
-
 <body data-spy="scroll" data-target="#navbar">
 	<div class="top">
 		<!-- ナビゲーションバー -->
 		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
 			<div class="container-fluid">
 				<!-- ホームリンク -->
-				 <a aria-label="ホーム" class="navbar-brand" href="#"><i aria-hidden="true" class="fab fa-blogger fa-2x"></i></a> <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
+				<a aria-label="ホーム" class="navbar-brand" href="#"><i aria-hidden="true" class="fab fa-blogger fa-2x"></i></a> <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
 				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> <!-- メニュー -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
@@ -45,7 +44,8 @@
 			<video autoplay="" class="top__video" loop=""><source src="video/top-video.mp4" type="video/mp4"></video>
 		</div>
 		<div class="top__text-box">
-			<h1 class="top__title">Perfect Images<br>For Your Blog</h1>
+			<h1 class="top__title">Perfect Images<br>
+			For Your Blog</h1>
 			<div class="top__catchphrase">
 				Search perfect pictures from popular free photo stock site for your blog
 			</div>
@@ -55,7 +55,8 @@
 		<div class="kittens__phrase animated">
 			＼メアドとパスワード登録だけで無料で使える／
 		</div>
-		<h3 class="kittens__title animated">Perfect Images For Your Blog<br>使用方法</h3>
+		<h3 class="kittens__title animated">Perfect Images For Your Blog<br>
+		使用方法</h3>
 		<div class="showcase showcase--rightpic container-fluid tabs animated">
 			<!-- サムネイルと説明文 -->
 			<ul class="showcase__thumbnails tabs__menu">
@@ -92,55 +93,72 @@
 			</ul><!--/.row -->
 		</div><!--/.showcase -->
 	</section><!--/.kittens -->
-	
 	<!-- ログイン画面 -->
 	<section class="view" id="login">
 		<div class="container">
 			<div class="row justify-content-center animated">
 				<div class="col-sm-10 col-md-8 col-lg-6">
 					<h1>ユーザー登録・ログイン</h1>
-					<form id="login-form" name="login-form">
-						<div class="form-group" id="login__email">
-							<label class="col-form-label" for="login-email">Email</label>
-							<div>
-								<input class="form-control" id="login-email" required="" type="email">
+					<form>
+						<div class="visible-on-logout">
+							<div class="form-group row">
+								<label class="col-2 col-form-label">Email</label>
+								<div class="col-10">
+									<input id="user-mail" type="email"><br>
+								</div>
 							</div>
+							<div class="form-group row">
+								<label class="col-2 col-form-label">Password</label>
+								<div class="col-10">
+									<input id="user-pass" type="password"><br>
+								</div>
+							</div><button class="btn btn-success" id="login-button" type="button">ログイン</button>
 						</div>
-						<div class="form-group" id="login__password">
-							<label class="col-form-label" for="login-password">Password</label>
-							<div>
-								<input class="form-control" id="login-password" required="" type="password">
-								<p class="form-text text-muted">初めての方は、登録するパスワードを入力してください</p>
-							</div>
-						</div>
-						<div class="alert alert-danger" id="login__help"></div>
-						<div class="form-group login__submit">
-							<div>
-								<button class="btn btn-primary" id="login__submit-button" type="submit">ログイン</button>
-							</div>
+						<div class="visible-on-login">
+							<button class="btn btn-info" id="logout-button" type="button">ログアウト</button>
 						</div>
 					</form>
+					<div class="visible-on-login">
+						<button class="btn btn-danger" id="my-button" type="button">setNewValue</button>
+					</div>
 				</div>
 			</div>
 		</div>
-	</section>
-	<!-- /#login -->
+	</section><!-- /#login -->
 	<!-- フッター -->
 	<footer>
 		&copy; 2021 Perfect Images for Your Blog
 	</footer><!-- フッター -->
-	<!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
+	<!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
+	<!-- The core Firebase JS SDK is always required and must be listed first
+    (中心となるFirebase SDKです。常に必要で、最初に記述する必要があります) -->
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js">
+	</script> <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#config-web-app
+      (使いたいFirebaseサービス用のSDKを加えます) -->
+	 
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js">
+	</script> 
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js">
+	</script> 
+	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js">
+	</script> <!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
+	 
 	<script>
-	   // Your web app's Firebase configuration
-	   const firebaseConfig = {
-	     apiKey: "AIzaSyBI7-7M4eHHb9hJC-SHnqvwstAsHyrqKuw",
-	     authDomain: "realtime-chat-f5884.firebaseapp.com",
-	     databaseURL: "https://realtime-chat-f5884-default-rtdb.firebaseio.com",
-	     projectId: "realtime-chat-f5884",
-	     storageBucket: "realtime-chat-f5884.appspot.com",
-	   };
-	   // Initialize Firebase
-	   firebase.initializeApp(firebaseConfig);
+	      // Your web app's Firebase configuration
+	      const firebaseConfig = {
+	        apiKey: "AIzaSyAx400v27P3EQsfC-adyWAAZbrqH-3oodI",
+	        authDomain: "pifyb-2ac75.firebaseapp.com",
+	        databaseURL: "https://pifyb-2ac75-default-rtdb.firebaseio.com",
+	        projectId: "pifyb-2ac75",
+	        storageBucket: "pifyb-2ac75.appspot.com",
+	      };
+	      // Initialize Firebase
+	      firebase.initializeApp(firebaseConfig);
+	</script> 
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+	</script> 
+	<script src="test.js">
 	</script> <!-- まずjQuery -->
 	 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js">

@@ -64,13 +64,7 @@ new Vue({
 	data: {
 		// 利用するデータを設定
 		photoDatas: [],
-	},
-	
-	created() {
-		this.fetchImagesFromFlickr('searchText');
-		this.fetchImagesFromFlickr('searchText');
-		this.fetchImagesFromFlickr('searchText');
-		this.fetchImagesFromFlickr('searchText');
+		searchText: '',
 	},
 	
 	//Vueが読み込まれたときに実行する処理を定義
@@ -92,8 +86,12 @@ new Vue({
 					imageURL: getFlickrImageURL(photo, 'q'),
 					pageURL: getFlickrPageURL(photo),
 					text: getFlickrText(photo),
+							search(){
+				this.fetchImagesFromFlickr(this.searchText);
+				}
 				}));
 			}, this);
+			
 		}
 	}
 });

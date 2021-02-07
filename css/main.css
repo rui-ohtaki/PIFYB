@@ -409,6 +409,12 @@ footer {
   }
 }
 
+/**
+ * ----------
+ * ログイン画面
+ * ----------
+ */
+
 #login {
   padding-top: 51px;
 }
@@ -417,6 +423,18 @@ footer {
   display: none;
 }
 
+.visible-on-logout {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.visible-block {
+  display: block;
+}
+.hidden-block {
+  display: none;
+}
+      
 .titlebar { 
   padding-top: 51px;
   text-align: left;
