@@ -70,7 +70,10 @@ new Vue({
 	//Vueが読み込まれたときに実行する処理を定義
 
 	methods: {
-		
+			search(){
+				this.fetchImagesFromFlickr(this.searchText);
+				},
+				
 		fetchImagesFromFlickr(searchText) {
 			const url = getRequestURL(searchText);
 			$.getJSON(url, (data) => {
@@ -81,15 +84,12 @@ new Vue({
 				if (fetchedPhotos.length === 0) {
 					return;
 				}
-				this.photoDatas[searchText] = data.photos.photo.map(photo => ({
+				this.photoDatas.push(data.photos.photo.map(photo => ({
 					id: photo.id,
 					imageURL: getFlickrImageURL(photo, 'q'),
 					pageURL: getFlickrPageURL(photo),
 					text: getFlickrText(photo),
-							search(){
-				this.fetchImagesFromFlickr(this.searchText);
-				}
-				}));
+				})));
 			}, this);
 			
 		}

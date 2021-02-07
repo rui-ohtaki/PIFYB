@@ -50,32 +50,29 @@
 	</div>
 	<div class="search__box">
 		<form action="cgi-bin/example.cgi" method="post">
-			<p>登録したいキーワードを入力してください。</p>
 			<input v-model="searchText">
 			<input v-model="searchText">
 			<input v-model="searchText">
 			<input v-model="searchText">
 			<input v-model="searchText">
-      <button v-on:click="search">画像検索</button>
 		</form>
 	</div>
 
   <!-- ギャラリー -->
   <section id="gallery" class="gallery">
-    <div class="image-gallery">
-  
-         <div id="gallery">
-           <div class="titlebar">
-           <h3>Cakes</h3>
-           </div>
-          <a
-            v-for="gallery"
-            v-bind:key="photo.id"
-            v-bind:href="photo.pageURL"
-            v-tooltip="photo.text"
-            class="d-inline-block"
-            target="_blank"
-          >
+  <p class = search>登録したいキーワードを入力してください。</p>
+  <imput v-model="searchText">
+  <button v-on:click="search">画像検索</button>
+  <div>
+    <div v-for="photos in photoDatas" class="image-gallery">
+      <div>
+        <a v-for="photo in photos"
+         v-bind:key="photo.id"
+         v-bind:href="photo.pageURL"
+         v-tooltip="photo.text"
+         class="d-inline-block"
+         target="_blank"
+         >
             <div class="image-gallery__item">
             <img
               v-bind:src="photo.imageURL"
@@ -87,85 +84,7 @@
          </a>
         </div>
     </div>
-  
-    <div class="image-gallery">
-         <div id="gallery">
-           <div class="titlebar">
-           <h3>Fruits</h3>
-           </div>
-          <a
-            v-for="gallery"
-            v-bind:key="photo.id"
-            v-bind:href="photo.pageURL"
-            v-tooltip="photo.text"
-            class="d-inline-block"
-            target="_blank"
-          >
-  
-            <div class="image-gallery__item">
-            <img
-              v-bind:src="photo.imageURL"
-              v-bind:alt="photo.text"
-              width="150"
-              height="150"
-            >
-            </div>
-        </a>
-      </div>
-    </div>
-  
-    <div class="image-gallery">
-         <div id="gallery">
-           <div class="titlebar">
-           <h3>Cats</h3>
-           </div>
-          <a
-            v-for="gallery"
-            v-bind:key="photo.id"
-            v-bind:href="photo.pageURL"
-            v-tooltip="photo.text"
-            class="d-inline-block"
-            target="_blank"
-          >
-  
-            <div class="image-gallery__item">
-            <img
-              v-bind:src="photo.imageURL"
-              v-bind:alt="photo.text"
-              width="150"
-              height="150"
-            >
-            </div>
-         </a>
-        </div>
-    </div>
-  
-  
-    <div class="image-gallery">
-         <div id="gallery">
-           <div class="titlebar">
-           <h3>Chocolate</h3>
-           </div>
-          <a
-            v-for="gallery"
-            v-bind:key="photo.id"
-            v-bind:href="photo.pageURL"
-            v-tooltip="photo.text"
-            class="d-inline-block"
-            target="_blank"
-          >
-  
-            <div class="image-gallery__item">
-            <img
-              v-bind:src="photo.imageURL"
-              v-bind:alt="photo.text"
-              width="150"
-              height="150"
-            >
-            </div>
-         </a>
-        </div>
-    </div>
+  </div>
   </section>
 <!--/.gallery -->
 
