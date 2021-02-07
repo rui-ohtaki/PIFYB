@@ -62,9 +62,21 @@ new Vue({
 	// ローカル登録するコンポーネントを設定
 	// ( コンポーネントを利用しない場合は components: {}, は削除すること )
 	data: {
-		// 利用するデータを設定
-		photoDatas: [],
-		searchText: '',
+	// 利用するデータを設定
+	photoDatas: [],
+	searchText1: '',
+	searchText2: '',
+	searchText3: '',
+	searchText4: '',
+	searchText5: '',
+		},
+		
+	search(){
+	this.fetchImagesFromFlickr(this.searchText1);
+	this.fetchImagesFromFlickr(this.searchText2);
+	this.fetchImagesFromFlickr(this.searchText3);
+	this.fetchImagesFromFlickr(this.searchText4);
+	this.fetchImagesFromFlickr(this.searchText5);
 	},
 	
 	//Vueが読み込まれたときに実行する処理を定義
