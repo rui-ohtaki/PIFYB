@@ -45,13 +45,19 @@
 			</div><!--/.container-fluid -->
 		</nav>
 		<div class="top__text-box">
-			<h3 class="top__title">Perfect Imagesfor Your Blog<br>
+			<h3 class="top__title">Perfect Images For Your Blog<br>
 			画像検索</h3>
 		</div>
 	</div>
 	<div class="search__box">
 		<form action="cgi-bin/example.cgi" method="post">
-			<p>登録したいキーワードを入力してください。</p><input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="search" placeholder="キーワードを入力" type="search"> <input name="submit" type="submit" value="登録・更新">
+			<p>登録したいキーワードを入力してください。</p>
+			<input name="search" placeholder="キーワードを入力" type="search">
+			<input name="search" placeholder="キーワードを入力" type="search">
+			<input name="search" placeholder="キーワードを入力" type="search">
+			<input name="search" placeholder="キーワードを入力" type="search">
+			<input name="search" placeholder="キーワードを入力" type="search">
+			<input name="submit" type="submit" value="登録・更新">
 		</form>
 	</div>
 
@@ -64,7 +70,7 @@
            <h3>Cakes</h3>
            </div>
           <a
-            v-for="photo in cakes"
+            v-for="gallery"
             v-bind:key="photo.id"
             v-bind:href="photo.pageURL"
             v-tooltip="photo.text"
@@ -89,7 +95,7 @@
            <h3>Fruits</h3>
            </div>
           <a
-            v-for="photo in fruits"
+            v-for="gallery"
             v-bind:key="photo.id"
             v-bind:href="photo.pageURL"
             v-tooltip="photo.text"
@@ -115,7 +121,7 @@
            <h3>Cats</h3>
            </div>
           <a
-            v-for="photo in cats"
+            v-for="gallery"
             v-bind:key="photo.id"
             v-bind:href="photo.pageURL"
             v-tooltip="photo.text"
@@ -142,7 +148,7 @@
            <h3>Chocolate</h3>
            </div>
           <a
-            v-for="photo in chocolates"
+            v-for="gallery"
             v-bind:key="photo.id"
             v-bind:href="photo.pageURL"
             v-tooltip="photo.text"

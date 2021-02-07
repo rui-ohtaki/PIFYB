@@ -20,6 +20,7 @@ const getRequestURL = (searchText) => {
 	const url = `https://api.flickr.com/services/rest/?${parameters}`;
 	return url;
 };
+
 // photoオブジェクトから画像のURLを作成して返す
 const getFlickrImageURL = (photo, size) => {
 	let url = `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${
@@ -62,17 +63,16 @@ new Vue({
 	// ( コンポーネントを利用しない場合は components: {}, は削除すること )
 	data: {
 		// 利用するデータを設定
-		cakes: [],
-		fruits: [],
-	    cats: [],
-	  　chocolates: [],
+		photoDatas: [],
 	},
+	
 	created() {
-		this.fetchImagesFromFlickr('cake');
-		this.fetchImagesFromFlickr('fruit');
-		this.fetchImagesFromFlickr('cat');
-		this.fetchImagesFromFlickr('chocolate');
+		this.fetchImagesFromFlickr('searchText');
+		this.fetchImagesFromFlickr('searchText');
+		this.fetchImagesFromFlickr('searchText');
+		this.fetchImagesFromFlickr('searchText');
 	},
+	
 	//Vueが読み込まれたときに実行する処理を定義
 
 	methods: {
@@ -87,7 +87,7 @@ new Vue({
 				if (fetchedPhotos.length === 0) {
 					return;
 				}
-				this[searchText + 's'] = data.photos.photo.map(photo => ({
+				this.photoDatas[searchText] = data.photos.photo.map(photo => ({
 					id: photo.id,
 					imageURL: getFlickrImageURL(photo, 'q'),
 					pageURL: getFlickrPageURL(photo),

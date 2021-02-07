@@ -183,15 +183,15 @@ showTab('kittens-1');
 initParallax();
 
 
-// ビュー（画面）を変更する
-const showView = (id) => {
-  $('.view').hide();
-  $(`#${id}`).fadeIn();
+// // ビュー（画面）を変更する
+// const showView = (id) => {
+//   $('.view').hide();
+//   $(`#${id}`).fadeIn();
 
-  if (id === 'chat') {
-    loadChatView();
-  }
-};
+//   if (id === 'chat') {
+//     loadChatView();
+//   }
+// };
 
 // ログインフォームを初期状態に戻す
 const resetLoginForm = () => {
@@ -207,7 +207,7 @@ const onLogin = () => {
   console.log('ログイン完了');
 
   // チャット画面を表示
-  showView('chat');
+  location.href("../index.html");
 };
 
 // ログアウトした直後に呼ばれる
@@ -220,12 +220,12 @@ const onLogout = () => {
     .database()
     .ref('rooms')
     .off('value');
-  currentRoomName = null;
+  // currentRoomName = null;
   dbdata = {};
   resetLoginForm();
-  resetChatView();
-  resetSettingsModal();
-  resetFavoritesListModal(); // お気に入り一覧のモーダルを初期化
+  // resetChatView();
+  // resetSettingsModal();
+  // resetFavoritesListModal(); // お気に入り一覧のモーダルを初期化
   showView('login');
 };
 
