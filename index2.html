@@ -77,9 +77,10 @@
 	
   <imput v-model="searchText">
   <button v-on:click="search">画像検索</button>
+  <button v-on:click="clear">クリア</button>
   <div>
-    <div v-for="photos in photoDatas" class="image-gallery">
-        <p>{{ searchText1 }}</p>
+    <div v-for="(photos,key) in photoDatas" class="image-gallery">
+        <p>{{ searchTexts[key] }}</p>
       <div>
         <a v-for="photo in photos"
          v-bind:key="photo.id"
@@ -100,10 +101,7 @@
         </div>
     </div>
   </div>
-
-  <imput v-model="searchText"> 
-  <button v-on:click="clear">削除</button>
-    
+  
   </section>
 <!--/.gallery -->
 

@@ -64,6 +64,7 @@ new Vue({
   data: {
 	// 利用するデータを設定
 	photoDatas: [],
+	searchTexts: [],
 	searchText1: '',
 	searchText2: '',
 	searchText3: '',
@@ -96,8 +97,15 @@ new Vue({
 	　
 	clear() {
 			this.photoDatas = [];
+			this.searchTexts = [];
+			this.searchText1 ='';
+			this.searchText2 ='';
+			this.searchText3 ='';
+			this.searchText4 ='';
+			this.searchText5 ='';
 	},
 		fetchImagesFromFlickr(searchText) {
+			this.clear();
 			const url = getRequestURL(searchText);
 			$.getJSON(url, (data) => {
 				if (data.stat !== 'ok') {
@@ -113,13 +121,13 @@ new Vue({
 					pageURL: getFlickrPageURL(photo),
 					text: getFlickrText(photo),
 				})));
-			}, this);
-			//検索キーワードを表示する
-				const searchTextDisplay = (searchText1) => {
-				  	if(this.searchText1 != '') {
-				    $(`.searchText1-${searchText1}`).text(searchText1);
-				    }
-				  };
+				this.searchTexts.push(searchText);
+			 }, this);
+			const searchTextDisplay = (searchText1) => {
+				if(this.searchText1 !=''){
+					$(`.searchText1-${searchText1}`).text(searchText1);
+				} 
+			};
 		}
 		
 	}
