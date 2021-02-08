@@ -11,7 +11,7 @@ const getRequestURL = (searchText) => {
 		api_key: API_KEY,
 		text: searchText, // 検索テキスト
 		sort: 'interestingness-desc', // 興味深さ順
-		per_page: 4, // 取得件数
+		per_page: 8, // 取得件数
 		license: '4', // Creative Commons Attributionのみ
 		extras: 'owner_name,license', // 追加で取得する情報
 		format: 'json', // レスポンスをJSON形式に
@@ -61,7 +61,7 @@ new Vue({
 	el: '#gallery', // elオプションの値に '#gallery' を設定
 	// ローカル登録するコンポーネントを設定
 	// ( コンポーネントを利用しない場合は components: {}, は削除すること )
-	data: {
+  data: {
 	// 利用するデータを設定
 	photoDatas: [],
 	searchText1: '',
@@ -69,22 +69,20 @@ new Vue({
 	searchText3: '',
 	searchText4: '',
 	searchText5: '',
-		},
+  },
 		
-	search(){
-	this.fetchImagesFromFlickr(this.searchText1);
-	this.fetchImagesFromFlickr(this.searchText2);
-	this.fetchImagesFromFlickr(this.searchText3);
-	this.fetchImagesFromFlickr(this.searchText4);
-	this.fetchImagesFromFlickr(this.searchText5);
-	},
+
 	
 	//Vueが読み込まれたときに実行する処理を定義
 
 	methods: {
-			search(){
-				this.fetchImagesFromFlickr(this.searchText);
-				},
+	 search(){
+			this.fetchImagesFromFlickr(this.searchText1);
+			this.fetchImagesFromFlickr(this.searchText2);
+			this.fetchImagesFromFlickr(this.searchText3);
+			this.fetchImagesFromFlickr(this.searchText4);
+			this.fetchImagesFromFlickr(this.searchText5);
+	　},
 				
 		fetchImagesFromFlickr(searchText) {
 			const url = getRequestURL(searchText);

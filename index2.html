@@ -49,19 +49,21 @@
 			<h3 class="top__title">Perfect Images For Your Blog<br>画像検索</h3>
 		</div>
 	</div>
-	<div class="search__box">
-		<form action="cgi-bin/example.cgi" method="post">
-			<input v-model="searchText">
-			<input v-model="searchText">
-			<input v-model="searchText">
-			<input v-model="searchText">
-			<input v-model="searchText">
-		</form>
-	</div>
 
   <!-- ギャラリー -->
   <section id="gallery" class="gallery">
-  <p class = search>登録したいキーワードを入力してください。</p>
+
+  	<div class="search__box">
+  	      <p class = "search">登録したいキーワードを入力してください。</p>
+		<form action="cgi-bin/example.cgi" method="post">
+			<input v-model="searchText1">
+			<input v-model="searchText2">
+			<input v-model="searchText3">
+			<input v-model="searchText4">
+			<input v-model="searchText5">
+		</form>
+	</div>
+	
   <imput v-model="searchText">
   <button v-on:click="search">画像検索</button>
   <div>
