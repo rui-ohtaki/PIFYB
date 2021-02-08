@@ -118,6 +118,7 @@ $('.tabs__menu a').on('click', (e) => {
  */
 $('.nav-link').on('click', (e) => {
 	const destination = $(e.target).attr('href');
+	if (destination.indexOf('#') === 0) {
 	// 本来のクリックイベントは処理しない
 	e.preventDefault();
 	$('html, body').animate({
@@ -125,6 +126,7 @@ $('.nav-link').on('click', (e) => {
 	}, 1000, );
 	// ハンバーガーメニューが開いている場合は閉じる
 	$('.navbar-toggler:visible').trigger('click');
+	}
 });
 /**
  * -----------------------------------------

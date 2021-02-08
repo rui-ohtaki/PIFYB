@@ -38,23 +38,25 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#top">Top</a>
+							<a class="nav-link" href="#">Top</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a>
+							<a class="nav-link" href="#">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#faq">FAQ</a>
+							<a class="nav-link" href="#">FAQ</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contact</a>
+							<a class="nav-link" href="#">Contact</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#logout">Logout</a>
+							<a class="nav-link" href="./index.html">Logout</a>
 						</li>
 					</ul>
-				</div><!--/.nav-collapse -->
-			</div><!--/.container-fluid -->
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
 		</nav>
 		<div class="top__text-box">
 			<h3 class="top__title">Perfect Images For Your Blog<br>画像検索</h3>
@@ -62,10 +64,10 @@
 	</div>
 
   <!-- ギャラリー -->
-  <section id="gallery" class="gallery">
+  <section id="gallery" class="search__box">
 
-  	<div class="search__box">
-  	      <p class = "search">登録したいキーワードを入力してください。</p>
+  	<div class="search">
+  	      <p class = >検索したいキーワードを入力してください。</p>
 		<form action="cgi-bin/example.cgi" method="post">
 			<input v-model="searchText1">
 			<input v-model="searchText2">

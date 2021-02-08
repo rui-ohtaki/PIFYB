@@ -32,16 +32,16 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="#top">Top</a>
+							<a class="nav-link" href="#">Top</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#about">About</a>
+							<a class="nav-link" href="#">About</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#faq">FAQ</a>
+							<a class="nav-link" href="#">FAQ</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#contact">Contact</a>
+							<a class="nav-link" href="#">Contact</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#login">Login</a>
@@ -66,51 +66,54 @@
 		</div>
 	</div>
 	<!-- 子猫の種類 -->
-	<section class="kittens" id="kittens">
-		<div class="kittens__phrase animated">
+	<section class="description" id="description">
+		<div class="description__phrase animated">
 			＼メアドとパスワード登録だけで無料で使える／
 		</div>
-		<h3 class="kittens__title animated">Perfect Images For Your Blog<br>
+		<h3 class="description__title animated">Perfect Images For Your Blog<br>
 		使用方法</h3>
-		<div class="showcase showcase--rightpic container-fluid tabs animated">
+		<div class="showcase showcase--pic container-fluid tabs animated">
 			<!-- サムネイルと説明文 -->
 			<ul class="showcase__thumbnails tabs__menu">
 				<li>
-					<href="#kittens-1">
-					<div class="row">
-						<div class="col-xs-3"><img alt="ユーザー登録" class="img-fluid rounded" height="100" src="img/thumbnail/user.jpg" width="100"></div>
+					<div class="row animated">
+						<div class="col-xs-3">
+							<img alt="ユーザー登録" class="img-fluid rounded" height="100" src="img/thumbnail/user.jpg" width="100">
+						</div>
 						<div class="col-xs-7">
-							<h3 class="showcase__kind-name">無料ユーザー登録</h3>
+							<h3 class="showcase__kind-tilte">無料ユーザー登録</h3>
 							<p class="showcase__kind-description">メールアドレスとパスワード設定のみでユーザー登録が完了します。</p>
 						</div>
-					</div></a>
+					</div>
 				</li>
 				<li>
-					<a href="#kittens-1">
-					<div class="row">
-						<div class="col-xs-3"><img alt="カテゴリ登録" class="img-fluid rounded" height="100" src="img/thumbnail/search.jpg" width="100"></div>
+					<div class="row animated">
+						<div class="col-xs-3">
+							<img alt="カテゴリ登録" class="img-fluid rounded" height="100" src="img/thumbnail/search.jpg" width="100">
+						</div>
 						<div class="col-xs-7">
-							<h3 class="showcase__kind-name">ブログカテゴリ登録</h3>
+							<h3 class="showcase__kind-tilte">ブログカテゴリ登録</h3>
 							<p class="showcase__kind-description">ブログカテゴリをキーワードとして複数の人気フリー画像サイトから写真を検索します。</p>
 						</div>
-					</div></a>
+					</div>
 				</li>
 				<li>
-					<a href="#kittens-1">
-					<div class="row">
-						<div class="col-xs-3"><img alt="画像ダウンロード" class="img-fluid rounded" height="100" src="img/thumbnail/PC.jpg" width="100"></div>
+					<div class="row animated">
+						<div class="col-xs-3">
+							<img alt="画像ダウンロード" class="img-fluid rounded" height="100" src="img/thumbnail/PC.jpg" width="100">
+						</div>
 						<div class="col-xs-7">
-							<h3 class="showcase__kind-name">気に入った写真をダウンロード</h3>
+							<h3 class="showcase__kind-tilte">気に入った写真をダウンロード</h3>
 							<p class="showcase__kind-description">気に入った写真をダウンロードしてあなたのブログのアイキャッチやサムネイルに。</p>
 						</div>
-					</div></a>
+					</div>
 				</li>
 			</ul>
 		　　<!--/.row -->
 		</div>
 		<!--/.showcase -->
 	</section>
-	<!--/.kittens -->
+	<!--/.description -->
 	
 	<!-- ログイン画面 -->
 	<section class="view" id="login">
@@ -131,7 +134,8 @@
 								<div class="col-10">
 									<input id="user-pass" type="password"><br>
 								</div>
-							</div><button class="btn btn-success" id="login-button" type="button">ログイン</button>
+							</div>
+							<button class="btn btn-success" id="login-button" type="button">ログイン</button>
 						</div>
 						<div class="visible-on-login">
 							<button class="btn btn-info" id="logout-button" type="button">ログアウト</button>
