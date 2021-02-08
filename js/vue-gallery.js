@@ -77,21 +77,23 @@ new Vue({
 	//Vueが読み込まれたときに実行する処理を定義
 
 	methods: {
-	 search(){
+	 async search(){
+	 	this.searchTexts = [];
+	 	this.photoDatas = [];
 			if(this.searchText1 != '') {
-			this.fetchImagesFromFlickr(this.searchText1);
+			await this.fetchImagesFromFlickr(this.searchText1);
 			}
 			if(this.searchText2 != '') {
-			this.fetchImagesFromFlickr(this.searchText2);
+			await this.fetchImagesFromFlickr(this.searchText2);
 			}
 			if(this.searchText3 != '') {
-			this.fetchImagesFromFlickr(this.searchText3);
+			await this.fetchImagesFromFlickr(this.searchText3);
 			}
 			if(this.searchText4 != '') {
-			this.fetchImagesFromFlickr(this.searchText4);
+			await this.fetchImagesFromFlickr(this.searchText4);
 			}
 			if(this.searchText5 != '') {
-			this.fetchImagesFromFlickr(this.searchText5);
+			await this.fetchImagesFromFlickr(this.searchText5);
 			}
 	　},
 	　
@@ -104,10 +106,9 @@ new Vue({
 			this.searchText4 ='';
 			this.searchText5 ='';
 	},
-		fetchImagesFromFlickr(searchText) {
-			this.clear();
+		async fetchImagesFromFlickr(searchText) {
 			const url = getRequestURL(searchText);
-			$.getJSON(url, (data) => {
+			await $.getJSON(url, (data) => {
 				if (data.stat !== 'ok') {
 					return;
 				}
@@ -127,7 +128,7 @@ new Vue({
 				if(this.searchText1 !=''){
 					$(`.searchText1-${searchText1}`).text(searchText1);
 				} 
-			};
+			}
 		}
 		
 	}
