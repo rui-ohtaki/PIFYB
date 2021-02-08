@@ -77,13 +77,26 @@ new Vue({
 
 	methods: {
 	 search(){
+			if(this.searchText1 != '') {
 			this.fetchImagesFromFlickr(this.searchText1);
+			}
+			if(this.searchText2 != '') {
 			this.fetchImagesFromFlickr(this.searchText2);
+			}
+			if(this.searchText3 != '') {
 			this.fetchImagesFromFlickr(this.searchText3);
+			}
+			if(this.searchText4 != '') {
 			this.fetchImagesFromFlickr(this.searchText4);
+			}
+			if(this.searchText5 != '') {
 			this.fetchImagesFromFlickr(this.searchText5);
+			}
 	　},
-				
+	　
+	clear() {
+			this.photoDatas = [];
+	},
 		fetchImagesFromFlickr(searchText) {
 			const url = getRequestURL(searchText);
 			$.getJSON(url, (data) => {
@@ -101,7 +114,13 @@ new Vue({
 					text: getFlickrText(photo),
 				})));
 			}, this);
-			
+			//検索キーワードを表示する
+				const searchTextDisplay = (searchText1) => {
+				  	if(this.searchText1 != '') {
+				    $(`.searchText1-${searchText1}`).text(searchText1);
+				    }
+				  };
 		}
+		
 	}
 });

@@ -3,12 +3,16 @@
 <head>
 	<meta charset="utf-8">
 	<title>Perfect Images For Your Blog</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport"><!-- Webフォント -->
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet"><!-- Bootstrap CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"><!-- その他のライブラリのCSS -->
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<!-- Webフォント -->
+	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- その他のライブラリのCSS -->
 	<link href="css/vendor/animate.css" rel="stylesheet">
 	<link href="css/vendor/magnific-popup.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet"><noscript><!-- JavaScriptが無効化されている場合の追加スタイルシート -->
+	<link href="css/main.css" rel="stylesheet"><noscript>
+	<!-- JavaScriptが無効化されている場合の追加スタイルシート -->
 	<link href="css/noscript.css" rel="stylesheet"></noscript>
 </head>
 <body data-spy="scroll" data-target="#navbar">
@@ -17,8 +21,14 @@
 		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
 			<div class="container-fluid">
 				<!-- ホームリンク -->
-				<a aria-label="ホーム" class="navbar-brand" href="#"><i aria-hidden="true" class="fab fa-blogger fa-2x"></i></a> <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
-				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button> <!-- メニュー -->
+				<a aria-label="ホーム" class="navbar-brand" href="#">
+					<i aria-hidden="true" class="fab fa-blogger fa-2x"></i>
+				</a> 
+				<!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
+				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+				 	<span class="navbar-toggler-icon"></span>
+				 </button> 
+				<!-- メニュー -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item">
@@ -37,20 +47,25 @@
 							<a class="nav-link" href="#login">Login</a>
 						</li>
 					</ul>
-				</div><!--/.nav-collapse -->
-			</div><!--/.container-fluid -->
-		</nav><!-- 背景とビデオ -->
+				</div>
+			<!--/.nav-collapse -->
+			</div>
+			<!--/.container-fluid -->
+		</nav>
+		<!-- 背景とビデオ -->
 		<div class="top__bg">
-			<video autoplay="" class="top__video" loop=""><source src="video/top-video.mp4" type="video/mp4"></video>
+			<video autoplay="" class="top__video" loop="">
+				<source src="video/top-video.mp4" type="video/mp4">
+			</video>
 		</div>
 		<div class="top__text-box">
-			<h1 class="top__title">Perfect Images<br>
-			For Your Blog</h1>
+			<h1 class="top__title">Perfect Images<br>For Your Blog</h1>
 			<div class="top__catchphrase">
 				Search perfect pictures from popular free photo stock site for your blog
 			</div>
 		</div>
-	</div><!-- 子猫の種類 -->
+	</div>
+	<!-- 子猫の種類 -->
 	<section class="kittens" id="kittens">
 		<div class="kittens__phrase animated">
 			＼メアドとパスワード登録だけで無料で使える／
@@ -90,9 +105,13 @@
 						</div>
 					</div></a>
 				</li>
-			</ul><!--/.row -->
-		</div><!--/.showcase -->
-	</section><!--/.kittens -->
+			</ul>
+		　　<!--/.row -->
+		</div>
+		<!--/.showcase -->
+	</section>
+	<!--/.kittens -->
+	
 	<!-- ログイン画面 -->
 	<section class="view" id="login">
 		<div class="container">
@@ -126,10 +145,13 @@
 		</div>
 	</section>
 	<!-- /#login -->
+	
 	<!-- フッター -->
 	<footer>
 		&copy; 2021 Perfect Images for Your Blog
-	</footer><!-- フッター -->
+	</footer>
+	<!-- フッター -->
+	
 	<!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
 	<!-- The core Firebase JS SDK is always required and must be listed first
     (中心となるFirebase SDKです。常に必要で、最初に記述する必要があります) -->
@@ -142,9 +164,10 @@
 	</script> 
 	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js">
 	</script> 
-	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js">
-	</script> <!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
-	 
+	<!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"> -->
+	</script> 
+	
+	<!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
 	<script>
 	      // Your web app's Firebase configuration
 	      const firebaseConfig = {
