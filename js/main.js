@@ -165,6 +165,19 @@ const setValue = () => {
 	// Firebase上のmykeyの値を更新
 	firebase.database().ref('mykey').set(num);
 };
+
+const createUser = (mail, pass) => {
+	firebase.auth().createUserWithEmailAndPassword(mail, pass)
+		.then((userRecord) => {
+			firebase.auth().signInWithEmailAndPassword(mail, pass) // ログイン実行
+				.then((user) => {
+					// ログインに成功したときの処理
+					console.log('ログインしました', user);
+					location.href = "index2.html";
+			});
+		});
+}
+
 const logIn = (mail, pass) => {
 	firebase.auth().signInWithEmailAndPassword(mail, pass) // ログイン実行
 		.then((user) => {
@@ -174,6 +187,7 @@ const logIn = (mail, pass) => {
 		}).catch((error) => {
 			// ログインに失敗したときの処理
 			console.error('ログインエラー', error);
+			createUser(mail,pass);
 		});
 };
 const logOut = () => {
@@ -222,5 +236,6 @@ $('#login-button').on('click', () => {
 });
 // id="logout-button"をクリックしたら呼び出される、イベントハンドラを登録
 $('#logout-button').on('click', () => {
-	logOut();
+	location.href = "index.html";
+	//	logOut();
 });

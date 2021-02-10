@@ -23,11 +23,11 @@
 				<!-- ホームリンク -->
 				<a aria-label="ホーム" class="navbar-brand" href="#">
 					<i aria-hidden="true" class="fab fa-blogger fa-2x"></i>
-				</a> 
+				</a>
 				<!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
 				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
 				 	<span class="navbar-toggler-icon"></span>
-				 </button> 
+				 </button>
 				<!-- メニュー -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
@@ -74,7 +74,7 @@
 		使用方法</h3>
 		<div class="showcase showcase--pic container-fluid tabs animated">
 			<!-- サムネイルと説明文 -->
-			<ul class="showcase__thumbnails tabs__menu">
+			<ul class="showcase__thumbnail">
 				<li>
 					<div class="row animated">
 						<div class="col-xs-3">
@@ -114,25 +114,25 @@
 		<!--/.showcase -->
 	</section>
 	<!--/.description -->
-	
+
 	<!-- ログイン画面 -->
 	<section class="view" id="login">
 		<div class="container">
-			<div class="row justify-content-center animated">
+			<div class="row d-flex justify-content-center animated text-center">
 				<div class="col-sm-10 col-md-8 col-lg-6">
 					<h1>ユーザー登録・ログイン</h1>
 					<form>
 						<div class="visible-on-logout">
-							<div class="form-group row">
+							<div class="form-group row text-right">
 								<label class="col-2 col-form-label">Email</label>
-								<div class="col-10">
-									<input id="user-mail" type="email"><br>
+								<div class="col-10 text-left">
+									<input id="user-mail" type="email" class="form-input" style="width:100%;">
 								</div>
 							</div>
-							<div class="form-group row">
+							<div class="form-group row text-right">
 								<label class="col-2 col-form-label">Password</label>
-								<div class="col-10">
-									<input id="user-pass" type="password"><br>
+								<div class="col-10 text-left">
+									<input id="user-pass" type="password" class="form-input" style="width:100%;">
 								</div>
 							</div>
 							<button class="btn btn-success" id="login-button" type="button">ログイン</button>
@@ -141,21 +141,18 @@
 							<button class="btn btn-info" id="logout-button" type="button">ログアウト</button>
 						</div>
 					</form>
-					<div class="visible-on-login">
-						<button class="btn btn-danger" id="my-button" type="button">setNewValue</button>
-					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- /#login -->
-	
+
 	<!-- フッター -->
 	<footer>
 		&copy; 2021 Perfect Images for Your Blog
 	</footer>
 	<!-- フッター -->
-	
+
 	<!-- Firebaseのセットアップコード（下記のSDKのバージョンは6.2.0） -->
 	<!-- The core Firebase JS SDK is always required and must be listed first
     (中心となるFirebase SDKです。常に必要で、最初に記述する必要があります) -->
@@ -163,14 +160,14 @@
 	</script> <!-- TODO: Add SDKs for Firebase products that you want to use
        https://firebase.google.com/docs/web/setup#config-web-app
       (使いたいFirebaseサービス用のSDKを加えます) -->
-	 
+
 	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js">
-	</script> 
+	</script>
 	<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js">
-	</script> 
+	</script>
 	<!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-storage.js"> -->
-	</script> 
-	
+	</script>
+
 	<!-- apiKeyなどは、ご自身の環境のものに合わせてください -->
 	<script>
 	      // Your web app's Firebase configuration
@@ -183,34 +180,34 @@
 	      };
 	      // Initialize Firebase
 	      firebase.initializeApp(firebaseConfig);
-	</script> 
+	</script>
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
-	</script> 
+	</script>
 	<script src="test.js">
 	</script> <!-- まずjQuery -->
-	 
+
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js">
 	</script> <!-- Popper.js, 次に Bootstrap JS -->
-	 
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-	</script> 
+	</script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
 	</script> <!-- その他のライブラリのJavaScript -->
-	 
+
 	<script src="js/vendor/jquery.waypoints.min.js">
-	</script> 
+	</script>
 	<script src="js/vendor/jquery.magnific-popup.min.js">
-	</script> 
+	</script>
 	<script src="js/vendor/mobile-detect.min.js">
 	</script> <!-- Vue.js -->
-	 
+
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-	</script> 
+	</script>
 	<script src="js/vue-gallery.js">
-	</script> 
+	</script>
 	<script src="js/main.js">
 	</script> <!-- Font Awesome -->
-	 
+
 	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js">
 	</script>
 </body>

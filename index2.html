@@ -1,142 +1,138 @@
 <!DOCTYPE html>
 <html lang="ja">
-  
+
 <head>
-	<meta charset="utf-8">
-	<title>Perfect Images For Your Blog</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
-	<!-- Webフォント -->
-	<link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-	<!-- Bootstrap CSS -->
-	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-	<!-- その他のライブラリのCSS -->
-	<link href="css/vendor/animate.css" rel="stylesheet">
-	<link href="css/vendor/magnific-popup.css" rel="stylesheet">
-	<link href="css/main.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-	</script> 
-	<noscript>
-	<!-- JavaScriptが無効化されている場合の追加スタイルシート -->
-	<link href="css/noscript.css" rel="stylesheet">
-	</noscript>
+  <meta charset="utf-8">
+  <title>Perfect Images For Your Blog</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <!-- Webフォント -->
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <!-- その他のライブラリのCSS -->
+  <link href="css/vendor/animate.css" rel="stylesheet">
+  <link href="css/vendor/magnific-popup.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+  </script>
+  <noscript>
+  <!-- JavaScriptが無効化されている場合の追加スタイルシート -->
+  <link href="css/noscript.css" rel="stylesheet">
+  </noscript>
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
-	<div class="top">
-		<!-- ナビゲーションバー -->
-		<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
-			<div class="container-fluid">
-				<!-- ホームリンク -->
-				 <a aria-label="ホーム" class="navbar-brand" href="#">
-				 	<i aria-hidden="true" class="fab fa-blogger fa-2x"></i>
-				 </a> 
-				 <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
-				 <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
-				 	<span class="navbar-toggler-icon"></span>
-				 </button> 
-				 <!-- メニュー -->
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav mr-auto">
-						<li class="nav-item">
-							<a class="nav-link" href="#">Top</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">About</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">FAQ</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="./index.html">Logout</a>
-						</li>
-					</ul>
-				</div>
-				<!--/.nav-collapse -->
-			</div>
-			<!--/.container-fluid -->
-		</nav>
-		<div class="top__text-box">
-			<h3 class="top__title">Perfect Images For Your Blog<br>画像検索</h3>
-		</div>
-	</div>
-
-  <!-- ギャラリー -->
-  <section id="gallery" class="search__box">
-
-  	<div class="search">
-  	      <p class = >検索したいキーワードを入力してください。</p>
-		<form action="cgi-bin/example.cgi" method="post">
-			<input v-model="searchText1">
-			<input v-model="searchText2">
-			<input v-model="searchText3">
-			<input v-model="searchText4">
-			<input v-model="searchText5">
-		</form>
-	</div>
-	
-  <imput v-model="searchText">
-  <button v-on:click="search">画像検索</button>
-  <button v-on:click="clear">クリア</button>
-  <div>
-    <div v-for="(photos,key) in photoDatas" class="image-gallery">
-        <p>{{ searchTexts[key] }}</p>
-      <div>
-        <a v-for="photo in photos"
-         v-bind:key="photo.id"
-         v-bind:href="photo.pageURL"
-         v-tooltip="photo.text"
-         class="d-inline-block"
-         target="_blank"
-         >
-            <div class="image-gallery__item">
-            <img
-              v-bind:src="photo.imageURL"
-              v-bind:alt="photo.text"
-              width="150"
-              height="150"
-            >
-            </div>
+  <div class="top">
+    <!-- ナビゲーションバー -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- ホームリンク -->
+         <a aria-label="ホーム" class="navbar-brand" href="#">
+           <i aria-hidden="true" class="fab fa-blogger fa-2x"></i>
          </a>
+         <!-- 画面幅が狭い時に表示されるハンバーガーメニュー -->
+         <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+           <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- メニュー -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Top</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Logout</a>
+            </li>
+          </ul>
         </div>
+        <!--/.nav-collapse -->
+      </div>
+      <!--/.container-fluid -->
+    </nav>
+    <div class="top__text-box">
+      <h3 class="top__title">Perfect Images For Your Blog<br>画像検索</h3>
     </div>
   </div>
-  
-  </section>
-<!--/.gallery -->
 
-<!-- フッター -->
-	<footer>
-		&copy; 2021 Perfect Images for Your Blog
-	</footer>
+  <section id="gallery" class="search__box">
+    <div class="search">
+      <p>検索したいキーワードを入力してください。</p>
+      <input v-model="searchText1">
+      <input v-model="searchText2">
+      <input v-model="searchText3">
+      <input v-model="searchText4">
+      <input v-model="searchText5">
+      <div class="text-left">
+        <button v-on:click="search">画像検索</button>
+        <button v-on:click="clear">クリア</button>
+      </div>
+    </div>
+    <div>
+      <div v-for="(photos,key) in photoDatas" class="image-gallery">
+        <div>
+          <br>
+          <div class="text-left" style="margin-left:100px;">
+            <p>{{ searchTexts[key] }}</p>
+          </div>
+          <a v-for="photo in photos"
+          v-bind:key="photo.id"
+          v-bind:href="photo.pageURL"
+          v-tooltip="photo.text"
+          class="d-inline-block"
+          target="_blank"
+          >
+              <div class="image-gallery__item">
+              <img
+                v-bind:src="photo.imageURL"
+                v-bind:alt="photo.text"
+                width="150"
+                height="150"
+              >
+              </div>
+          </a>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2021 Perfect Images for Your Blog
+  </footer>
 
 <!-- まずjQuery -->
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js">
-	</script> 
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js">
+  </script>
 <!-- Popper.js, 次に Bootstrap JS -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
-	</script> 
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
-	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
 <!-- その他のライブラリのJavaScript -->
-	<script src="js/vendor/jquery.waypoints.min.js">
-	</script> 
-	<script src="js/vendor/jquery.magnific-popup.min.js">
-	</script> 
-	<script src="js/vendor/mobile-detect.min.js">
-	</script> <!-- Vue.js -->
-	 
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
-	</script> 
-	<script src="js/vue-gallery.js">
-	</script> 
-	<script src="js/main.js">
-	</script> <!-- Font Awesome -->
-	 
-	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js">
-	</script>
+  <script src="js/vendor/jquery.waypoints.min.js">
+  </script>
+  <script src="js/vendor/jquery.magnific-popup.min.js">
+  </script>
+  <script src="js/vendor/mobile-detect.min.js">
+  </script> <!-- Vue.js -->
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+  </script>
+  <script src="js/vue-gallery.js">
+  </script>
+  <script src="js/main.js">
+  </script> <!-- Font Awesome -->
+
+  <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js">
+  </script>
 </body>
 
 </html>
