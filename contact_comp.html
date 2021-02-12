@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Perfect Images For Your Blog|画像検索</title>
+  <title>Perfect Images For Your Blog|送信完了</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <!-- Webフォント -->
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
@@ -58,51 +58,20 @@
       </div>
       <!--/.container-fluid -->
     </nav>
-    <div class="top__text-box">
-      <h3 class="top__title">Perfect Images For Your Blog<br>画像検索</h3>
+    <div id="main_visual">
+        <img src="img/thumbnail/contact.jpg" alt="お問い合わせ">
     </div>
   </div>
-
-  <section id="gallery" class="search__box">
-    <div class="search">
-      <p>検索したいキーワードを入力してください。</p>
-      <input v-model="searchText1">
-      <input v-model="searchText2">
-      <input v-model="searchText3">
-      <input v-model="searchText4">
-      <input v-model="searchText5">
-      <div class="text-left">
-        <button v-on:click="search">画像検索</button>
-        <button v-on:click="clear">クリア</button>
-      </div>
+    <div class="container">
+        <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
+        <p>ありがとうございました。送信を受け付けました。</p>
+        <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
+        <div class="text-center mb-4">
+            <!-- 「戻る」ボタンを緑色にする設定を追加 -->
+            <a href="contact.html" class="btn btn-success">戻る</a>
+        </div>
     </div>
-    <div>
-      <div v-for="(photos,key) in photoDatas" class="image-gallery">
-        <div>
-          <br>
-          <div class="text-left" style="margin-left:100px;">
-            <p>{{ searchTexts[key] }}</p>
-          </div>
-          <a v-for="photo in photos"
-          v-bind:key="photo.id"
-          v-bind:href="photo.pageURL"
-          v-tooltip="photo.text"
-          class="d-inline-block"
-          target="_blank"
-          >
-              <div class="image-gallery__item">
-              <img
-                v-bind:src="photo.imageURL"
-                v-bind:alt="photo.text"
-                width="150"
-                height="150"
-              >
-              </div>
-          </a>
-          </div>
-      </div>
-    </div>
-  </section>
+</body>
 
   <footer>
     &copy; 2021 Perfect Images for Your Blog

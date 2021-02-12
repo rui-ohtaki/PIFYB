@@ -236,6 +236,7 @@ $('#login-button').on('click', () => {
 });
 // id="logout-button"をクリックしたら呼び出される、イベントハンドラを登録
 $('#logout-button').on('click', () => {
+	logOut();
 	location.href = "index.html";
-	//	logOut();
 });
+
