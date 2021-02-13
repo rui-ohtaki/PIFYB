@@ -1,3 +1,22 @@
+<?php
+
+$coname = $_POST['coname'];
+$name = $_POST['name'];
+$mail = $_POST['mail'];
+$tel = $_POST['tel'];
+$toiawase = $_POST['toiawase'];
+
+$mailTO = $mail;
+$mailHeader = "From: Perfect Images For Your Blog Contact";
+
+$mailSubject = "お問い合わせありがとうございます";
+$mailBody = $name . "様 お問い合わせありがとうございます";
+$mailBody .= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
+
+mail($mailTO, $mailSubject, $mailBody, $mailHeader);
+
+echo "
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -104,4 +123,4 @@
   </script>
 </body>
 
-</html>
+</html>";

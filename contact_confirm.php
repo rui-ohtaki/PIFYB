@@ -1,9 +1,18 @@
+<?php
+    $coname = $_POST['coname'];
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $tel = $_POST['tel'];    
+    $toiawase = $_POST['toiawase'];
+
+echo "
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
   <meta charset="utf-8">
-  <title>Perfect Images For Your Blog|お問い合わせ</title>
+  <title>Perfect Images For Your Blog|問い合わせ内容確認</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <!-- Webフォント -->
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
@@ -62,83 +71,30 @@
         <img src="img/thumbnail/contact.jpg" alt="お問い合わせ">
     </div>
   </div>
+  会社名：$coname
+  </br>
+  お名前：$name
+  </br>
+  メールアドレス：$mail
+  </br>
+  電話番号：$tel
+  </br>
+  お問い合わせ内容
+  </br>
+  $toiawase
+  </br>
+  </br>
+  <form action='complete.php' method='post'>
+  <input type='hidden' name='coname' value='$coname'>
+  <input type='hidden' name='name' value='$name'>
+  <input type='hidden' name='mail' value='$mail'>
+  <input type='hidden' name='tel' value='$tel'>
+  <input type='hidden' name='toiawase' value='$toiawase'>
+  <input type='button' onclick='history.back()' value='戻る'>
+  <input type='submit' value='確認'>
+  </form>
+</body>
 
-  <body>
-    <form action="./contact_confirm.php" method="post">
-       <div class="container">
-        <h1 class="mt-4 pb-4 border-bottom">お問い合わせ</h1>
-        <div class="mt-4 row">
-            <div class="col-sm-3">
-                <i class="far fa-envelope"></i> <strong>メール</strong>
-            </div>
-
-            <div class="col-sm-9">
-              <p>お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。</p>
-                <form action="complete.html">
-                    
-                    <div id="coname">
-                    <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">会社名</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="coname">
-                            </div>
-                    </div>
-                    </div>
-                    
-                    <div id="name">
-                      <div class="form-group row">
-
-                          <label class="col-sm-3 col-form-label">氏名</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="name">
-                            </div>
-                      </div>
-                    </div>
-                    
-                    <div id="mail">
-                      <div class="form-group row">
-
-                          <label class="col-sm-3 col-form-label">メール</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="mail">
-                            </div>
-                      </div>
-                    </div>
-                    
-                    <div id="tel">
-                      <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">電話番号</label>
-                            <div class="col-sm-9">
-                                <input type="text" class="form-control" name="tel">
-                            </div>
-                      </div>
-                    </div>
-
-                    <div id="toiawase">
-                      <div class="form-group row">
-
-                          <label class="col-sm-3 col-form-label">内容</label>
-                            <div class="col-sm-9">
-                                <textarea class="form-control" name="toiawase"></textarea>
-                            </div>
-                      </div>
-                    </div>
-              <p>|個人情報の取扱について|</p>
-              <p>ご入力いただいた個人情報は、お問い合わせへの対応および確認のためのみに利用します。<br>
-                 また、この目的のためにお問い合わせ内容を記録に残すことがあります。<br>
-                 上記に同意の上、送信ボタンを押してください。</p>
-                    <div class="form-group row">
-                        <div class="offset-sm-3 col-sm-9">
-                            <button type="submit" class="btn btn-success btn-block">お問い合わせ内容を送信する</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-   </form>
-  </body>
-  
   <footer>
     &copy; 2021 Perfect Images for Your Blog
   </footer>
@@ -170,4 +126,4 @@
   </script>
 </body>
 
-</html>
+</html>";
