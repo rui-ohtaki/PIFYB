@@ -2,20 +2,14 @@
 
 $coname = $_POST['coname'];
 $name = $_POST['name'];
-$mail = $_POST['mail'];
 $tel = $_POST['tel'];
 $toiawase = $_POST['toiawase'];
-
-$mailTO = $mail;
-$mailHeader = "From: Perfect Images For Your Blog Contact";
-
+$mailHeader = "From: PerfectImagesForYourBlog Contact";
 $mailSubject = "お問い合わせありがとうございます";
-$mailBody = $name . "様 お問い合わせありがとうございます";
-$mailBody .= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
-
-mail($mailTO, $mailSubject, $mailBody, $mailHeader);
-
-echo "
+$mailBody = $name. "様 お問い合わせありがとうございます";
+$mailBody = "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
+mail('contact@perfect-imgs.sakura.ne.jp',$to, $mailSubject, $mailBody, $mailHeader);
+?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -83,13 +77,21 @@ echo "
   </div>
     <div class="container">
         <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
-        <p>ありがとうございました。送信を受け付けました。</p>
-        <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
-        <div class="text-center mb-4">
-            <!-- 「戻る」ボタンを緑色にする設定を追加 -->
-            <a href="contact.html" class="btn btn-success">戻る</a>
+          <div class="mt-4 row">
+            <div class="col-sm-3">
+                <i class="far fa-envelope"></i> <strong>送信完了</strong>
+            </div>
+              <div class="col-sm-9">
+              <p>お問い合わせを受け付けました。<br>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
+                    <div class="form-group row">
+                        <div class="offset-sm-3 col-sm-9">
+                  <!-- 「戻る」ボタンを緑色にする設定を追加 -->
+                        <a href="contact.html" class="btn btn-success">戻る</a>
+                       </div>
+                   </div>
+            </div>
         </div>
-    </div>
+      </div>
 </body>
 
   <footer>
@@ -123,4 +125,4 @@ echo "
   </script>
 </body>
 
-</html>";
+</html>

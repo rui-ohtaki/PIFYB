@@ -1,15 +1,5 @@
-<?php
-    $coname = $_POST['coname'];
-    $name = $_POST['name'];
-    $mail = $_POST['mail'];
-    $tel = $_POST['tel'];    
-    $toiawase = $_POST['toiawase'];
-
-echo "
-
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="utf-8">
   <title>Perfect Images For Your Blog|問い合わせ内容確認</title>
@@ -31,7 +21,16 @@ echo "
 </head>
 
 <body data-spy="scroll" data-target="#navbar">
-  <div class="top">
+
+<?php
+    $coname = $_POST['coname'];
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $tel = $_POST['tel'];
+    $toiawase = $_POST['toiawase'];
+?>
+
+<div class="top">
     <!-- ナビゲーションバー -->
     <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
       <div class="container-fluid">
@@ -71,28 +70,58 @@ echo "
         <img src="img/thumbnail/contact.jpg" alt="お問い合わせ">
     </div>
   </div>
-  会社名：$coname
-  </br>
-  お名前：$name
-  </br>
-  メールアドレス：$mail
-  </br>
-  電話番号：$tel
-  </br>
-  お問い合わせ内容
-  </br>
-  $toiawase
-  </br>
-  </br>
-  <form action='complete.php' method='post'>
-  <input type='hidden' name='coname' value='$coname'>
-  <input type='hidden' name='name' value='$name'>
-  <input type='hidden' name='mail' value='$mail'>
-  <input type='hidden' name='tel' value='$tel'>
-  <input type='hidden' name='toiawase' value='$toiawase'>
-  <input type='button' onclick='history.back()' value='戻る'>
-  <input type='submit' value='確認'>
-  </form>
+    <div class="container">
+        <h1 class="mt-4 pb-4 border-bottom">お問い合わせ内容確認</h1>
+          <div class="mt-4 row">
+            <div class="col-sm-3">
+                <i class="far fa-envelope"></i> <strong>送信内容</strong>
+            </div>
+              <div class="col-sm-9">
+              <p>お問い合わせの内容をご確認のうえ送信ボタンを押してください。</p>
+        　     <div class="form-group row">
+              <label class="col-sm-3 col-form-label">会社名</label>
+              <div class="col-sm-9"><?php echo $coname ?></div>
+              </br>
+              </div>
+               <div class="form-group row">
+              <label class="col-sm-3 col-form-label">お名前</label>
+              <div class="col-sm-9"><?php echo $name ?></div>
+              </br>
+              </div>
+              <div class="form-group row">
+              <label class="col-sm-3 col-form-label">メールアドレス</label>
+              <div class="col-sm-9"><?php echo $mail ?></div>
+              </br>
+              </div>
+              <div class="form-group row">
+              <label class="col-sm-3 col-form-label">電話番号</label>
+              <div class="col-sm-9"><?php echo $tel ?></div>
+              </br>
+              </div>
+              <div class="form-group row">
+              <label class="col-sm-3 col-form-label">お問い合わせ内容</label>
+              </br>
+              <div class="col-sm-9"><?php echo $toiawase ?></div>
+              </br>
+              </br>
+              </div>
+              <form action='contact_comp.php' method='post'>
+              <input type='hidden' name='coname' value='$coname'>
+              <input type='hidden' name='name' value='$name'>
+              <input type='hidden' name='mail' value='$mail'>
+              <input type='hidden' name='tel' value='$tel'>
+              <input type='hidden' name='toiawase' value='$toiawase'>
+              <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+              <input type='button' class="btn btn-info" onclick='history.back()' value='戻る'>
+              <input type='submit' class="btn btn-success" value='送信'>
+              </div>
+              </div>
+              </center>
+              </form>
+          </div>
+        </div>
+　　</div>
 </body>
 
   <footer>
@@ -125,5 +154,4 @@ echo "
   <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js">
   </script>
 </body>
-
-</html>";
+</html>
