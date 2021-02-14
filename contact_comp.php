@@ -6,7 +6,7 @@ $tel = $_POST['tel'];
 $toiawase = $_POST['toiawase'];
 $mailHeader.= "From: PerfectImagesForYourBlog Contact";
 $mailSubject.= "お問い合わせありがとうございます";
-$mailBody.= $name. "様 お問い合わせありがとうございます";
+$mailBody.= $name. "様 お問い合わせありがとうございます"."\n";
 $mailBody.= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。"."\n";
 $mailBody.= "会社名:";
 $mailBody.= $coname."\n";
@@ -18,7 +18,7 @@ $mailBody.= "電話番号:";
 $mailBody.= $tel."\n";
 $mailBody.= "お問い合わせ内容:";
 $mailBody.= $toiawase;
-mail('perf.imgs.contact@gmail.com,' . $to, $mailSubject, $mailHeader, $mailBody);
+mail('perf.imgs.contact@gmail.com;' . $to, $mailSubject, $mailHeader, $mailBody);
 ?>
 
 
@@ -92,7 +92,7 @@ mail('perf.imgs.contact@gmail.com,' . $to, $mailSubject, $mailHeader, $mailBody)
               <p>お問い合わせを受け付けました。<br>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
                     <div class="form-group row">
                         <div class="offset-sm-3 col-sm-9">
-                        <a href="contact.html" id="return-button" class="btn btn-success">戻る</a>
+                        <span id="return-button" class="btn btn-info">戻る</span>
                        </div>
                    </div>
             </div>
