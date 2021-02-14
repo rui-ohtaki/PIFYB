@@ -214,19 +214,7 @@ const changeView = () => {
 		$('.visible-on-logout').removeClass('hidden-block').addClass('visible-block');
 	}
 };
-// ユーザのログイン状態が変化したら呼び出される、コールバック関数を登録
-firebase.auth().onAuthStateChanged((user) => {
-	if (user) {
-		console.log('状態：ログイン中');
-		currentUID = user.uid;
-		changeView();
-		getValue();
-	} else {
-		console.log('状態：ログアウト');
-		currentUID = null;
-		changeView();
-	}
-});
+
 // id="my-button"をクリックしたら呼び出される、イベントハンドラを登録
 $('#my-button').on('click', () => {
 	setValue();
