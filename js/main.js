@@ -240,3 +240,13 @@ $('#logout-button').on('click', () => {
 	location.href = "index.html";
 });
 
+// id="return-button"をクリックしたら呼び出される、イベントハンドラを登録
+$('#return-button').on('click', () => {
+	if (currentUID != null) {
+    // ログイン状態のとき
+    location.href="index2.html";
+  } else {
+    // ログアウト状態のとき
+    location.href="index.html";
+  }
+});

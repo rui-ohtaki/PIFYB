@@ -1,14 +1,16 @@
 <?php
-
 $coname = $_POST['coname'];
 $name = $_POST['name'];
+$mail = $_POST['mail'];
 $tel = $_POST['tel'];
 $toiawase = $_POST['toiawase'];
-$mailHeader = "From: PerfectImagesForYourBlog Contact";
-$mailSubject = "お問い合わせありがとうございます";
-$mailBody = $name. "様 お問い合わせありがとうございます";
-$mailBody = "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
-mail('contact@perfect-imgs.sakura.ne.jp',$to, $mailSubject, $mailBody, $mailHeader);
+$mailHeader.= "From: PerfectImagesForYourBlog Contact";
+$mailSubject.= "お問い合わせありがとうございます";
+$mailBody.= $name. "様 お問い合わせありがとうございます";
+$mailBody.= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
+$mailBody.= "お問い合わせ内容";
+$mailBody.= $toiawase;
+mail('perf.imgs.contact@gmail.com,' . $to, $mailSubject, $mailHeader, $mailBody);
 ?>
 
 <!DOCTYPE html>
@@ -18,18 +20,14 @@ mail('contact@perfect-imgs.sakura.ne.jp',$to, $mailSubject, $mailBody, $mailHead
   <meta charset="utf-8">
   <title>Perfect Images For Your Blog|送信完了</title>
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <!-- Webフォント -->
   <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
-  <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-  <!-- その他のライブラリのCSS -->
   <link href="css/vendor/animate.css" rel="stylesheet">
   <link href="css/vendor/magnific-popup.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
   </script>
   <noscript>
-  <!-- JavaScriptが無効化されている場合の追加スタイルシート -->
   <link href="css/noscript.css" rel="stylesheet">
   </noscript>
 </head>
@@ -85,8 +83,7 @@ mail('contact@perfect-imgs.sakura.ne.jp',$to, $mailSubject, $mailBody, $mailHead
               <p>お問い合わせを受け付けました。<br>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
                     <div class="form-group row">
                         <div class="offset-sm-3 col-sm-9">
-                  <!-- 「戻る」ボタンを緑色にする設定を追加 -->
-                        <a href="contact.html" class="btn btn-success">戻る</a>
+                        <a href="contact.html" id="return-button" class="btn btn-success">戻る</a>
                        </div>
                    </div>
             </div>
