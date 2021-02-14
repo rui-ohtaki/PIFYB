@@ -18,7 +18,7 @@ $mailBody.= "電話番号:";
 $mailBody.= $tel."\n";
 $mailBody.= "お問い合わせ内容:";
 $mailBody.= $toiawase;
-mail('perf.imgs.contact@gmail.com;' . $to, $mailSubject, $mailHeader, $mailBody);
+mail('perf.imgs.contact@gmail.com;' . $mail, $mailSubject, $mailHeader, $mailBody);
 ?>
 
 

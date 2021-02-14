@@ -179,27 +179,30 @@ const createUser = (mail, pass) => {
 }
 
 const logIn = (mail, pass) => {
-	firebase.auth().signInWithEmailAndPassword(mail, pass) // ログイン実行
-		.then((user) => {
-			// ログインに成功したときの処理
-			console.log('ログインしました', user);
-			location.href = "index2.html";
-		}).catch((error) => {
-			// ログインに失敗したときの処理
-			console.error('ログインエラー', error);
-			createUser(mail,pass);
-		});
+    firebase.auth().signInWithEmailAndPassword(mail, pass) // ログイン実行
+        .then((user) => {
+            // ログインに成功したときの処理
+            console.log('ログインしました', user);
+            currentUID = user.uid;
+            location.href = "index2.html";
+        }).catch((error) => {
+            // ログインに失敗したときの処理
+            console.error('ログインエラー', error);
+            createUser(mail,pass);
+        });
 };
 const logOut = () => {
-	firebase.auth().signOut() // ログアウト実行
-		.then(() => {
-			// ログアウトに成功したときの処理
-			console.log('ログアウトしました');
-		}).catch((error) => {
-			// ログアウトに失敗したときの処理
-			console.error('ログアウトエラー', error);
-		});
+    firebase.auth().signOut() // ログアウト実行
+        .then(() => {
+            // ログアウトに成功したときの処理
+            console.log('ログアウトしました');
+            currentUID = null;
+        }).catch((error) => {
+            // ログアウトに失敗したときの処理
+            console.error('ログアウトエラー', error);
+        });
 };
+
 const changeView = () => {
 	if (currentUID != null) {
 		// ログイン状態のとき
