@@ -106,11 +106,13 @@
               </br>
               </div>
               <form action='contact_comp.php' method='post'>
-              <input type='hidden' name='coname' value='$coname'>
-              <input type='hidden' name='name' value='$name'>
-              <input type='hidden' name='mail' value='$mail'>
-              <input type='hidden' name='tel' value='$tel'>
-              <input type='hidden' name='toiawase' value='$toiawase'>
+                
+              <input type='hidden' name='coname' value='<?php echo $coname?>'>
+              <input type='hidden' name='name' value='<?php echo $name?>'>
+              <input type='hidden' name='mail' value='<?php echo $mail?>'>
+              <input type='hidden' name='tel' value='<?php echo $tel?>'>
+              <input type='hidden' name='toiawase' value='<?php echo $toiawase?>'>
+              
               <div class="form-group row">
               <div class="offset-sm-3 col-sm-9">
               <input type='button' class="btn btn-info" onclick='history.back()' value='戻る'>

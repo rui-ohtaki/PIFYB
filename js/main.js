@@ -241,8 +241,9 @@ $('#logout-button').on('click', () => {
 });
 
 // id="return-button"をクリックしたら呼び出される、イベントハンドラを登録
-$('#return-button').on('click', () => {
-	if (currentUID != null) {
+$('#return-button').on('click', (e) => {
+    e.preventDefault();
+    if (currentUID != null) {
     // ログイン状態のとき
     location.href="index2.html";
   } else {

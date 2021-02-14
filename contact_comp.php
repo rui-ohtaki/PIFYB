@@ -7,11 +7,20 @@ $toiawase = $_POST['toiawase'];
 $mailHeader.= "From: PerfectImagesForYourBlog Contact";
 $mailSubject.= "お問い合わせありがとうございます";
 $mailBody.= $name. "様 お問い合わせありがとうございます";
-$mailBody.= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。";
-$mailBody.= "お問い合わせ内容";
+$mailBody.= "お問い合わせの内容は、受付日から3営業日以内をめどにご返信いたします。"."\n";
+$mailBody.= "会社名:";
+$mailBody.= $coname."\n";
+$mailBody.= "お名前:";
+$mailBody.= $name."\n";
+$mailBody.= "メールアドレス:";
+$mailBody.= $mail."\n";
+$mailBody.= "電話番号:";
+$mailBody.= $tel."\n";
+$mailBody.= "お問い合わせ内容:";
 $mailBody.= $toiawase;
 mail('perf.imgs.contact@gmail.com,' . $to, $mailSubject, $mailHeader, $mailBody);
 ?>
+
 
 <!DOCTYPE html>
 <html lang="ja">
